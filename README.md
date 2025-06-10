@@ -41,7 +41,7 @@ Target modules: Falcon-specific layers
 
 Dropout: 0.05
 
-Training Parameters
+## Training Parameters
 Batch size: 4 (with gradient accumulation steps of 2)
 
 Learning rate: 2e-4
