@@ -85,7 +85,7 @@ Evaluation metrics
 
 Token length distribution statistics
 
-Files
+## Files
 falcon_patient_chatbot.ipynb: Main training notebook
 
 /falcon-patient-chatbot: Saved model checkpoints
@@ -97,10 +97,8 @@ This is a prototype and not for real medical use
 
 The model may generate incorrect or harmful medical information
 
-Limited to the scope of the training data
 
 ## Future Improvements
-Expand dataset with more diverse medical cases
 
 Implement more rigorous evaluation metrics
 
