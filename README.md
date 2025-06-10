@@ -19,10 +19,11 @@ bitsandbytes
 matplotlib
 # ## Dataset
 The dataset consists of doctor-patient interactions with the following structure:
-{
+```{
   "input": "Patient query text",
   "output": "Doctor response text"
 }
+```
 The data is automatically split into training and evaluation sets during loading.
 
 Model Configuration
@@ -30,7 +31,7 @@ Base model: tiiuae/falcon-7B-instruct
 
 Quantization: 4-bit NF4 with double quantization
 
-LoRA configuration:
+## LoRA configuration:
 
 Rank (r): 32
 
@@ -56,14 +57,13 @@ After training, you can use the model to generate responses:
 
 python
 from transformers import pipeline
-
+```
 medical_bot = pipeline(
     "text-generation",
     model=model,
     tokenizer=tokenizer,
     device=device
 )
-
 def generate_response(patient_query):
     prompt = f"### The following is a doctor's opinion on a patient's query:\n### Patient query: {patient_query}\n### Doctor opinion:"
     response = medical_bot(
@@ -75,6 +75,7 @@ def generate_response(patient_query):
         top_p=0.95
     )
     return response[0]['generated_text']
+```
 ## Results
 The training process outputs:
 
